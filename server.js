@@ -45,9 +45,6 @@ app.use(
 
 readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
 
-//socket io
-io.on("connect", (socket) => console.log("sockedio=>", socket.id));
-
 const port = process.env.PORT || 8000;
 
 http.listen(port, () => `Server running on port ${port} `);
