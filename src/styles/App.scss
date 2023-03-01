@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto";
+}
+a {
+  text-decoration: none;
+}
+.pointer {
+  cursor: pointer;
+}
+
+.backgroundHeaderTopLeft {
+  background: linear-gradient(
+    to left top,
+    rgba(2, 160, 228, 0.5),
+    rgb(0, 136, 255, 0.5),
+    rgb(8, 243, 216, 0.5),
+    rgba(2, 160, 228, 0.5)
+  );
+}
+
+.glow {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #f24f, 0 0 20px #f24f, 0 0 30px #e3e3, 0 0 40px #e3e3,
+      0 0 50px #e3e3, 0 0 60px #e3e3, 0 0 70px #e3e3;
+  }
+
+  to {
+    text-shadow: 0 0 20px #f24f, 0 0 30px #e4ee, 0 0 40px #e4ee, 0 0 50px #e4ee,
+      0 0 60px #e4ee, 0 0 70px #e4ee, 0 0 80px #e4ee;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .banner {
+    &__content {
+      flex-direction: column-reverse;
+
+      padding: 2rem !important;
+      &__img img {
+        width: 100%;
+      }
+    }
+  }
+
+  .footerModified {
+    margin: auto !important;
+  }
+  .features1 {
+    &__content {
+      padding: 1rem !important;
+      margin: 1rem !important;
+      width: 100% !important;
+    }
+    &__image img {
+      width: 50% !important;
+    }
+  }
+}

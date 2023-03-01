@@ -1,0 +1,44 @@
+@import "colors";
+
+.banner {
+  &__content {
+    font-size: 1.5rem;
+
+    padding: 5rem;
+    color: rgb(5, 47, 14);
+    display: flex;
+    align-items: center;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+    &__link {
+      text-align: center;
+    }
+  }
+  &__heading {
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    font-size: 1rem;
+    border-radius: 3rem;
+    border-radius: 1.2rem 3rem;
+    border: none;
+    padding: 1.5rem 5rem;
+    color: white;
+    background: linear-gradient(to right bottom, $third, $second);
+
+    &:hover {
+      color: unset;
+      background: unset;
+      outline: 2px dotted $second;
+      cursor: pointer;
+    }
+  }
+}

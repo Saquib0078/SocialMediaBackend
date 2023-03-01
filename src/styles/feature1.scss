@@ -1,0 +1,27 @@
+@import "colors";
+
+.features1 {
+  padding: 5rem 0;
+  background-color: rgba(178, 233, 242, 0.575);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  text-align: center;
+  &__image {
+    width: 100%;
+
+    img {
+      width: 25%;
+      border-radius: 30%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+}

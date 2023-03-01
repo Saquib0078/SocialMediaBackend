@@ -1,0 +1,13 @@
+.buttonMade {
+  border-radius: 0.5rem 1.2rem;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  color: white;
+  background-color: darkcyan;
+
+  &:hover {
+    background-color: rgb(2, 77, 77);
+  }
+}
