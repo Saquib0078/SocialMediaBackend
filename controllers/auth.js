@@ -55,7 +55,7 @@ export const login = async (req, res) => {
     const { email, password } = req.body;
     // check if our db has user with that email
     const user = await User.findOne({ email });
-    if (!user)
+    if (user === null)
       return res.json({
         error: "No user found!",
       });
@@ -77,7 +77,7 @@ export const login = async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    return res.status(400).send("Error. Try again.");
+    return res.status(400).send(err.message);
   }
 };
 
