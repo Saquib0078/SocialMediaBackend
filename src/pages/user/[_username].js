@@ -30,7 +30,7 @@ const Username = () => {
     if (user.image) {
       return user.image.url;
     } else {
-      return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZL5p16YV5QRk9p4t7VCNlp-PU2-5Yhv7wwg&usqp=CAU";
+      return "https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png";
     }
   };
 
