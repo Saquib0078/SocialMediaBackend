@@ -10,14 +10,17 @@ const app = express();
 
 // db
 mongoose
-  .connect(process.env.DATABASE, {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
+  .connect(
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.roytcnv.mongodb.net/?retryWrites=true&w=majority`,
+    {
+      useNewUrlParser: true,
+      // useFindAndModify: false,
+      useUnifiedTopology: true,
+      // useCreateIndex: true,
+    }
+  )
   .then(() => console.log("DB connected"))
-  .catch((err) => console.log("DB CONNECTION ERROR => ", err));
+  .catch((err) => console.log("DB connection error", err));
 
 // middlewares
 app.use(express.json({ limit: "5mb" }));
