@@ -27,9 +27,13 @@ app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["*"],
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-type"],
+    // origin: ["*"],
+    // methods: ["GET", "POST"],
+    // allowedHeaders: ["Content-type"],
+
+    origin: "*",
+    credentials: true, //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
   })
 );
 
