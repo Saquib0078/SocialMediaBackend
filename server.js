@@ -9,19 +9,10 @@ require("dotenv").config();
 const app = express();
 
 // db
-mongoose
-  .connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.roytcnv.mongodb.net/?retryWrites=true&w=majority`,
-    {
-      useNewUrlParser: true,
-      // useFindAndModify: false,
-      useUnifiedTopology: true,
-      // useCreateIndex: true,
-    }
-  )
-  .then(() => console.log("DB connected"))
-  .catch((err) => console.log("DB connection error", err));
-
+mongoose.connect("mongodb+srv://saquib007:IUnXazhITeBF13a0@cluster0.eo7jwgy.mongodb.net/chatting", {
+    useNewUrlParser: true})
+.then(()=> console.log("MongoDB is connected"))
+.catch(err => console.log(err))
 // middlewares
 app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ extended: true }));

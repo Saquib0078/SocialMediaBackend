@@ -8,7 +8,7 @@ import { nanoid } from "nanoid";
 
 export const register = async (req, res) => {
   //  console.log("REGISTER ENDPOINT => ", req.body);
-  const { name, email, password, secret } = req.body;
+  const { name, email, password } = req.body;
   // validation
   if (!name)
     return res.json({
@@ -18,10 +18,7 @@ export const register = async (req, res) => {
     return res.json({
       error: "Password is required and should be 6 characters long",
     });
-  if (!secret)
-    return res.json({
-      error: "Answer is required",
-    });
+ 
   const exist = await User.findOne({ email });
   if (exist)
     return res.json({
@@ -34,7 +31,7 @@ export const register = async (req, res) => {
     name,
     email,
     password: hashedPassword,
-    secret,
+   
     username: nanoid(6),
   });
   try {
@@ -45,7 +42,7 @@ export const register = async (req, res) => {
     });
   } catch (err) {
     console.log("REGISTER FAILED => ", err);
-    return res.status(400).send("Error. Try again.");
+    return res.status(400).send(err.message);
   }
 };
 
