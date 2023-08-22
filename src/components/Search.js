@@ -62,7 +62,7 @@ const Search = () => {
   };
   return (
     <>
-      <form className="form-inlin row" onSubmit={searchUser}>
+      {/* <form className="form-inlin row" onSubmit={searchUser}>
         <div className="col-8">
           <input
             onChange={(e) => {
@@ -80,7 +80,7 @@ const Search = () => {
             Search
           </button>
         </div>
-      </form>
+      </form> */}
 
       {result &&
         result.map((r) => (

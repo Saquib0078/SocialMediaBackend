@@ -19,7 +19,7 @@ const People = ({ people, handleFollow, handleUnFollow }) => {
               avatar={<Avatar src={imageSource(user)} />}
               title={
                 <div className="d-flex justify-content-between">
-                  <Link to={`/user/${user.username}`}> {user.username} </Link>
+                  <p>  {user.name} </p>
                   {state &&
                   state.user &&
                   user.followers &&

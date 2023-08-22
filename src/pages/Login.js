@@ -78,9 +78,7 @@ const Login = () => {
         <div className="row">
           <div className="col">
             <p className="text-center">
-              <Link className="text-danger" to={"/forgot-password"}>
-                Forgot password
-              </Link>
+              
             </p>
           </div>
         </div>

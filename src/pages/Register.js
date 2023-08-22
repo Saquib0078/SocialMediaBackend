@@ -26,8 +26,6 @@ const Register = () => {
         name,
         email,
         password,
-        secret,
-        image,
       });
 
       if (data.error) {
@@ -36,8 +34,7 @@ const Register = () => {
         setName("");
         setEmail("");
         setPassword("");
-        setSecret("");
-        setOk(data.ok);
+       alert("registered Successfully")
         setLoading(false);
       }
     } catch (error) {
@@ -61,6 +58,7 @@ const Register = () => {
           <div className="row py-5">
             <div className="col-md-6 offset-md-3">
               <AuthForm
+              
                 handleSubmit={handleSubmit}
                 name={name}
                 setName={setName}
@@ -68,29 +66,13 @@ const Register = () => {
                 setEmail={setEmail}
                 password={password}
                 setPassword={setPassword}
-                secret={secret}
-                setSecret={setSecret}
+               
                 loading={loading}
               />
             </div>
           </div>
 
-          <div className="row">
-            <div className="col">
-              <Modal
-                title="Congratulations!"
-                open={ok}
-                onCancel={() => setOk(false)}
-                footer={null}
-              >
-                <p>You have succesfully registered.</p>
-                <Link to={"/login"}>
-                  <p className="btn btn-primary">Login</p>
-                </Link>
-              </Modal>
-            </div>
-          </div>
-
+         
           <div className="row">
             <div className="col">
               <p className="text-center">

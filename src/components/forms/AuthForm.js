@@ -9,33 +9,16 @@ const AuthForm = ({
   setEmail,
   password,
   setPassword,
-  secret,
-  setSecret,
+
   loading,
   page,
-  username,
-  setUsername,
+
   about,
   setAbout,
   profileUpdate,
 }) => {
   return (
     <form onSubmit={handleSubmit}>
-      {profileUpdate && (
-        <div className="form-group p-2">
-          <small>
-            <label className="text-muted">Username</label>
-          </small>
-          <input
-            onChange={(e) => setUsername(e.target.value)}
-            value={username}
-            type="text"
-            className="form-control"
-            placeholder="Enter name"
-          />
-        </div>
-      )}
-
       {profileUpdate && (
         <div className="form-group p-2">
           <small>
@@ -92,35 +75,6 @@ const AuthForm = ({
         />
       </div>
 
-      {page !== "login" && (
-        <>
-          <div className="form-group p-2">
-            <small>
-              <label className="text-muted">Pick a question</label>
-            </small>
-            <select className="form-control">
-              <option>What is your favourite color?</option>
-              <option>What is your best friend's name?</option>
-              <option>What city you were born?</option>
-            </select>
-
-            <small className="form-text text-muted">
-              You can use this to reset your password if forgotten.
-            </small>
-          </div>
-
-          <div className="form-group p-2">
-            <input
-              onChange={(e) => setSecret(e.target.value)}
-              value={secret}
-              type="text"
-              className="form-control"
-              placeholder="Write your answer here"
-            />
-          </div>
-        </>
-      )}
-
       <div className="form-group p-2">
         <button
           disabled={
@@ -128,7 +82,7 @@ const AuthForm = ({
               ? loading
               : page === "login"
               ? !email || !password || loading
-              : !name || !email || !secret || !password || loading
+              : !name || !email || !password || loading
           }
           className="btn btn-info col-12"
         >

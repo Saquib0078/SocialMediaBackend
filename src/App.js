@@ -37,18 +37,15 @@ const App = () => {
           <ToastContainer position="top-center" theme="colored" />
         </Container>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/user/dashboard" element={<Dashboard />} />
           <Route path="/user/profile/update" element={<ProfileUpdate />} />
           <Route path="/user/following" element={<Following />} />
-          <Route path="/user/:_username" element={<Username />} />
 
           <Route path="/user/post/:_id" element={<EditPost />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/post/:_id" element={<PostComments />} />
 
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+         
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/admin" element={<Admin />} />

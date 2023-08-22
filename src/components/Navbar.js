@@ -29,12 +29,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg p-3 navbar-light bg-info">
         <Link to={"/"}>
-          <img
-            style={{ width: "8rem" }}
-            src={img1}
-            alt="logo"
-            className="navbar__logo"
-          />
+         
         </Link>
         <button
           className="navbar-toggler"
@@ -53,16 +48,16 @@ const Navbar = () => {
           id="navbarNavDropdown"
         >
           <ul className="navbar-nav">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 className={`nav-link  ${current === "/" && "active"}`}
                 to={"/"}
               >
                 Home <span className="sr-only">(current)</span>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
-              <Link
+              {/* <Link
                 className={`nav-link  ${current === "/about" && "active"}`}
                 to={"/about"}
               >
@@ -75,7 +70,7 @@ const Navbar = () => {
                 to={"/contact"}
               >
                 Contact
-              </Link>
+              </Link> */}
             </li>{" "}
           </ul>
           <div>

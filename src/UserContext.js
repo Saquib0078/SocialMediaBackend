@@ -14,7 +14,7 @@ const UserProvider = ({ children }) => {
   }, []);
 
   const token = state && state.token ? state.token : "";
-  axios.defaults.baseURL = "https://r-blog-social-backend.onrender.com/api";
+  axios.defaults.baseURL = "http://localhost:8000/api";
   axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
   axios.interceptors.response.use(
